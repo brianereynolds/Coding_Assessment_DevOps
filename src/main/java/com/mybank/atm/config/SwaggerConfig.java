@@ -19,7 +19,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
-    private static final String BASE_PACKAGE = "com.mybank.com.mybank.atm.controller";
+    // Why won't you work!?!
+    private static final String BASE_PACKAGE = "com.mybank.atm.controller.fists.mashing.on.keys";
 
     @Bean
     public Docket atmApi() {

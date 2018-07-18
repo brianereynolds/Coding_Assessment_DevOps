@@ -95,6 +95,12 @@ public class SafeService {
     public void withdrawCash(Map<BankNote, Integer> cashMap) throws ServiceException {
         logger.debug("withdrawCash: cashMap: {} ", cashMap);
 
+        // This is _not_ sensible
+        try {
+            Thread.sleep(30000);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
         for (BankNote note : allNotes) {
             Safe safeCash = safeRepository.getByBankNote(note);
             if (cashMap.get(note) != null) {
